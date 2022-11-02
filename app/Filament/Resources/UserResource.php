@@ -30,7 +30,7 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')->searchable(query: fn ($query, $search) => $query->orWhere('name', 'like', "%$search%")),
+                Tables\Columns\TextColumn::make('name')->searchable(query: fn ($query, $search) => $query->where('name', 'like', "%$search%")),
                 Tables\Columns\TextColumn::make('email')->searchable(),
             ])
             ->filters([
