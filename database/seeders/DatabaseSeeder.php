@@ -20,15 +20,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin')
         ])->create();
-        \App\Models\User::factory([
-            'name' => 'Foo',
-            'email' => 'bar@bar.com',
-        ])->create();
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(20)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }
